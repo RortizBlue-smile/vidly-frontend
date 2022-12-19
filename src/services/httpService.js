@@ -1,11 +1,10 @@
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { log } from './logService'
-import { apiUrl } from '../config.json'
 import { getJwt } from '../utils/jwtHelpers'
 
 const api = axios.create({
-	baseURL: apiUrl,
+	baseURL: import.meta.env.VITE_API,
 	headers: {
 		'Content-type': 'application/json;charset=utf-8',
 	},
